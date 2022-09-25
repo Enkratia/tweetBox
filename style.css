@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #1da1f2;
+}
+.wrapper{
+  background: #fff;
+  border-radius: 15px;
+  max-width: 475px;
+  width: 100%;
+  padding: 25px 25px 15px 25px;
+}
+.input-box{
+  padding-top: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.tweet-area{
+  position: relative;
+  min-height: 130px;
+  max-height: 170px;
+  overflow-y: auto;
+}
+.tweet-area::-webkit-scrollbar{
+  width: 0%;
+}
+.tweet-area .placeholder{
+  position: absolute;
+  margin-top: -3px;
+  font-size: 22px;
+  color: #98a5b1;
+  pointer-events: none;
+}
+.tweet-area .input{
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  /* word-wrap: break word; */
+  /* word-break: break-word; */
+  /* word-break: break-all; */  
+}
+.tweet-area .editable{
+  position: relative;
+  z-index: 5;
+}
+.tweet-area .readonly{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: transparent;
+  color: transparent;
+}
+.tweet-area .readonly .highlight{
+  background: #fd9bb0;
+}
+.input-box .privacy{
+  color: #1da1f2;
+  padding: 7px 10px;
+  cursor: pointer;
+  margin: 15px 0;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+}
+.input-box .privacy:hover, .icons li:hover{
+  background-color: #e7f5fe;
+}
+.privacy span{
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 7px;
+}
+.privacy i{
+  font-size: 18px;
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+.bottom .icons{
+  display: inline-flex;
+}
+.bottom .icons li{
+  color: #1da1f2;
+  list-style: none;
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+.bottom .content{
+  display: flex;
+  align-items: center;
+}
+.bottom .content .counter{
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #aab8c2;
+  color: #333;
+  display: none;
+}
+.bottom .content .counter.animate{
+  animation: animate 1s ease forwards;
+}
+.bottom .content button{
+  padding: 9px 18px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #1da1f2;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.bottom .content button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
